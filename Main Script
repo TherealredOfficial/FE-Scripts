@@ -1,0 +1,6 @@
+- YourGame
+  - src
+    - GUI.rbxl
+  - Scripts
+    - FlyScript.lua
+    - OtherScripts.lua
