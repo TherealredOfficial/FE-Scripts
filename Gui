@@ -1,0 +1,364 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local FEScripts = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Fly = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local NoClip = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local SuperSpeed = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local InfiniteYield = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local TPTool = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 65, 65)
+Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.768001318, 0, 0.249388739, 0)
+Frame.Size = UDim2.new(0, 249, 0, 409)
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = Frame
+
+FEScripts.Name = "FE Scripts"
+FEScripts.Parent = Frame
+FEScripts.BackgroundColor3 = Color3.fromRGB(255, 93, 93)
+FEScripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FEScripts.BorderSizePixel = 0
+FEScripts.Position = UDim2.new(-0.00401606411, 0, 0, 0)
+FEScripts.Size = UDim2.new(0, 249, 0, 50)
+FEScripts.Font = Enum.Font.DenkOne
+FEScripts.Text = "FE Scripts"
+FEScripts.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEScripts.TextSize = 33.000
+
+UICorner_2.Parent = FEScripts
+
+Fly.Name = "Fly"
+Fly.Parent = Frame
+Fly.BackgroundColor3 = Color3.fromRGB(255, 142, 142)
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.0963855386, 0, 0.156479225, 0)
+Fly.Size = UDim2.new(0, 200, 0, 50)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Flight"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextSize = 33.000
+
+UICorner_3.Parent = Fly
+
+NoClip.Name = "NoClip"
+NoClip.Parent = Frame
+NoClip.BackgroundColor3 = Color3.fromRGB(255, 142, 142)
+NoClip.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NoClip.BorderSizePixel = 0
+NoClip.Position = UDim2.new(0.0963855386, 0, 0.312958449, 0)
+NoClip.Size = UDim2.new(0, 200, 0, 50)
+NoClip.Font = Enum.Font.SourceSans
+NoClip.Text = "Noclip"
+NoClip.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoClip.TextSize = 33.000
+
+UICorner_4.Parent = NoClip
+
+SuperSpeed.Name = "Super Speed"
+SuperSpeed.Parent = Frame
+SuperSpeed.BackgroundColor3 = Color3.fromRGB(255, 142, 142)
+SuperSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SuperSpeed.BorderSizePixel = 0
+SuperSpeed.Position = UDim2.new(0.0963855386, 0, 0.464547664, 0)
+SuperSpeed.Size = UDim2.new(0, 200, 0, 50)
+SuperSpeed.Font = Enum.Font.SourceSans
+SuperSpeed.Text = "Super Speed"
+SuperSpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+SuperSpeed.TextSize = 33.000
+
+UICorner_5.Parent = SuperSpeed
+
+InfiniteYield.Name = "Infinite Yield"
+InfiniteYield.Parent = Frame
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(255, 142, 142)
+InfiniteYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.BorderSizePixel = 0
+InfiniteYield.Position = UDim2.new(0.0963855386, 0, 0.611246943, 0)
+InfiniteYield.Size = UDim2.new(0, 200, 0, 50)
+InfiniteYield.Font = Enum.Font.SourceSans
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.TextSize = 33.000
+
+UICorner_6.Parent = InfiniteYield
+
+TPTool.Name = "TP Tool"
+TPTool.Parent = Frame
+TPTool.BackgroundColor3 = Color3.fromRGB(255, 142, 142)
+TPTool.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TPTool.BorderSizePixel = 0
+TPTool.Position = UDim2.new(0.0963855386, 0, 0.765281081, 0)
+TPTool.Size = UDim2.new(0, 200, 0, 50)
+TPTool.Font = Enum.Font.SourceSans
+TPTool.Text = "TP Tool"
+TPTool.TextColor3 = Color3.fromRGB(0, 0, 0)
+TPTool.TextSize = 33.000
+
+UICorner_7.Parent = TPTool
+
+-- Scripts:
+
+local function CXUGKQ_fake_script() -- FEScripts.RainbowText 
+	local script = Instance.new('Script', FEScripts)
+
+	local text = script.Parent
+	local add = 10
+	wait(1)
+	local k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(k/255,0/255,0/255)
+	k = k + add
+	wait()
+	end
+	while true do
+	k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(255/255,k/255,0/255)
+	k = k + add
+	wait()
+	end
+	k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+	k = k + add
+	wait()
+	end
+	k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(0/255,255/255,k/255)
+	k = k + add
+	wait()
+	end
+	k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+	k = k + add
+	wait()
+	end
+	k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(k/255,0/255,255/255)
+	k = k + add
+	wait()
+	end
+	k = 1
+	while k <= 255 do
+	text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+	k = k + add
+	wait()
+	end
+	while k <= 255 do
+	text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+	k = k + add
+	wait()
+	end
+	end
+end
+coroutine.wrap(CXUGKQ_fake_script)()
+local function GSON_fake_script() -- Fly.Script 
+	local script = Instance.new('Script', Fly)
+
+	local button = script.Parent
+	local buttonColor = button.BackgroundColor3
+	
+	local redColor = Color3.new(1, 0.556, 0.556) -- Red color
+	local greenColor = Color3.new(0.49, 1, 0.333) -- Green color
+	
+	local isRed = true -- Initially, the button is red
+	local isTweening = false -- To prevent multiple simultaneous tweens
+	
+	-- Function to change the button color with a fade effect
+	local function changeColor()
+		if isTweening then
+			return -- Don't allow multiple simultaneous tweens
+		end
+	
+		isTweening = true
+	
+		local targetColor = isRed and greenColor or redColor
+		local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear) -- Changed the tween duration to 0.5 seconds
+		local tween = game:GetService("TweenService"):Create(button, tweenInfo, {
+			BackgroundColor3 = targetColor
+		})
+	
+		tween:Play()
+		tween.Completed:Wait()
+		isRed = not isRed
+		isTweening = false
+	end
+	
+	-- Connect the button click event to the color change function
+	button.MouseButton1Click:Connect(changeColor)
+	
+end
+coroutine.wrap(GSON_fake_script)()
+local function BHVUFWT_fake_script() -- NoClip.Script 
+	local script = Instance.new('Script', NoClip)
+
+	local button = script.Parent
+	local buttonColor = button.BackgroundColor3
+	
+	local redColor = Color3.new(1, 0.556, 0.556) -- Red color
+	local greenColor = Color3.new(0.49, 1, 0.333) -- Green color
+	
+	local isRed = true -- Initially, the button is red
+	local isTweening = false -- To prevent multiple simultaneous tweens
+	
+	-- Function to change the button color with a fade effect
+	local function changeColor()
+		if isTweening then
+			return -- Don't allow multiple simultaneous tweens
+		end
+	
+		isTweening = true
+	
+		local targetColor = isRed and greenColor or redColor
+		local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear) -- Changed the tween duration to 0.5 seconds
+		local tween = game:GetService("TweenService"):Create(button, tweenInfo, {
+			BackgroundColor3 = targetColor
+		})
+	
+		tween:Play()
+		tween.Completed:Wait()
+		isRed = not isRed
+		isTweening = false
+	end
+	
+	-- Connect the button click event to the color change function
+	button.MouseButton1Click:Connect(changeColor)
+	
+end
+coroutine.wrap(BHVUFWT_fake_script)()
+local function YTTMZRQ_fake_script() -- SuperSpeed.Script 
+	local script = Instance.new('Script', SuperSpeed)
+
+	local button = script.Parent
+	local buttonColor = button.BackgroundColor3
+	
+	local redColor = Color3.new(1, 0.556, 0.556) -- Red color
+	local greenColor = Color3.new(0.49, 1, 0.333) -- Green color
+	
+	local isRed = true -- Initially, the button is red
+	local isTweening = false -- To prevent multiple simultaneous tweens
+	
+	-- Function to change the button color with a fade effect
+	local function changeColor()
+		if isTweening then
+			return -- Don't allow multiple simultaneous tweens
+		end
+	
+		isTweening = true
+	
+		local targetColor = isRed and greenColor or redColor
+		local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear) -- Changed the tween duration to 0.5 seconds
+		local tween = game:GetService("TweenService"):Create(button, tweenInfo, {
+			BackgroundColor3 = targetColor
+		})
+	
+		tween:Play()
+		tween.Completed:Wait()
+		isRed = not isRed
+		isTweening = false
+	end
+	
+	-- Connect the button click event to the color change function
+	button.MouseButton1Click:Connect(changeColor)
+	
+end
+coroutine.wrap(YTTMZRQ_fake_script)()
+local function SMRONGP_fake_script() -- InfiniteYield.Script 
+	local script = Instance.new('Script', InfiniteYield)
+
+	local button = script.Parent
+	local buttonColor = button.BackgroundColor3
+	
+	local redColor = Color3.new(1, 0.556, 0.556) -- Red color
+	local greenColor = Color3.new(0.49, 1, 0.333) -- Green color
+	
+	local isRed = true -- Initially, the button is red
+	local isTweening = false -- To prevent multiple simultaneous tweens
+	
+	-- Function to change the button color with a fade effect
+	local function changeColor()
+		if isTweening then
+			return -- Don't allow multiple simultaneous tweens
+		end
+	
+		isTweening = true
+	
+		local targetColor = isRed and greenColor or redColor
+		local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear) -- Changed the tween duration to 0.5 seconds
+		local tween = game:GetService("TweenService"):Create(button, tweenInfo, {
+			BackgroundColor3 = targetColor
+		})
+	
+		tween:Play()
+		tween.Completed:Wait()
+		isRed = not isRed
+		isTweening = false
+	end
+	
+	-- Connect the button click event to the color change function
+	button.MouseButton1Click:Connect(changeColor)
+	
+end
+coroutine.wrap(SMRONGP_fake_script)()
+local function LNDRBM_fake_script() -- TPTool.Script 
+	local script = Instance.new('Script', TPTool)
+
+	local button = script.Parent
+	local buttonColor = button.BackgroundColor3
+	
+	local redColor = Color3.new(1, 0.556, 0.556) -- Red color
+	local greenColor = Color3.new(0.49, 1, 0.333) -- Green color
+	
+	local isRed = true -- Initially, the button is red
+	local isTweening = false -- To prevent multiple simultaneous tweens
+	
+	-- Function to change the button color with a fade effect
+	local function changeColor()
+		if isTweening then
+			return -- Don't allow multiple simultaneous tweens
+		end
+	
+		isTweening = true
+	
+		local targetColor = isRed and greenColor or redColor
+		local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear) -- Changed the tween duration to 0.5 seconds
+		local tween = game:GetService("TweenService"):Create(button, tweenInfo, {
+			BackgroundColor3 = targetColor
+		})
+	
+		tween:Play()
+		tween.Completed:Wait()
+		isRed = not isRed
+		isTweening = false
+	end
+	
+	-- Connect the button click event to the color change function
+	button.MouseButton1Click:Connect(changeColor)
+	
+end
+coroutine.wrap(LNDRBM_fake_script)()
